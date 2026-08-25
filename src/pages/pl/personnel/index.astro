@@ -25,7 +25,7 @@ const expert_staff = await getCollection('personnel', ({data, id}) => { return d
 				<div class="w-max-[1400px] md:h-max-[716px] w-[72%] h-auto bg-managerblue/50 flex flex-col py-[16px] px-[37px] md:py-[28px]">
 					<h1 class="font-display text-center text-[30px] md:text-[36px] p-[8px] md:p-0 w-full">{t("title.supervisor")}</h1>
 					<div class="w-full h-full flex flex-col md:flex-row items-center md:gap-[24px]">
-						<Avatar personnelPageLink={"personnel/" + supervisor[0].id.replace( lang + "/", "")} avatarLink={supervisor[0].data.avatar_link} name={supervisor[0].data.name_surname} />
+						<Avatar personnelPageLink={ `/${lang}/personnel/${supervisor[0].id.replace( lang + "/", "")}`} avatarLink={supervisor[0].data.avatar_link} name={supervisor[0].data.name_surname} />
 							<div class="flex flex-col md:flex-row w-full items-center justify-between my-[16px] 2xl:my-0">
 								<div class="h-auto w-fit flex flex-col items-center justify-center px-[8px]">
 									<p class="font-regular lg:text-left text-[16px] lg:text-[36px] w-full text-center">{supervisor[0].data.title}</p>
@@ -45,17 +45,17 @@ const expert_staff = await getCollection('personnel', ({data, id}) => { return d
 		<RegularSlide>
 			{scientific_staff.length > 0 && (<SectionTitleBar text={t("page.team.science")} />
 			<div class="w-full flex flex-row justify-center flex-wrap gap-[64px] p-[16px] md:p-[64px]">
-				{scientific_staff.map((researcher) => <Avatar personnelPageLink={"personnel/" + researcher.id.replace( lang + "/", "")} name={researcher.data.name_surname} title={researcher.data.title} showNameCard={true} avatarLink={researcher.data.avatar_link} role={researcher.data.role}/>)}
+				{scientific_staff.map((researcher) => <Avatar personnelPageLink={ `/${lang}/personnel/${researcher.id.replace( lang + "/", "")}`} name={researcher.data.name_surname} title={researcher.data.title} showNameCard={true} avatarLink={researcher.data.avatar_link} role={researcher.data.role}/>)}
 			</div>)
 			}
 			{technical_staff.length > 0 && (<SectionTitleBar text={t("page.team.technical")} />
 			<div class="w-full flex flex-row justify-center flex-wrap gap-[64px] p-[16px] md:p-[64px]">
-				{technical_staff.map((researcher) => <Avatar personnelPageLink={"personnel/" + researcher.id.replace( lang + "/", "")} name={researcher.data.name_surname} title={researcher.data.title} showNameCard={true} avatarLink={researcher.data.avatar_link} role={researcher.data.role}/>)}
+				{technical_staff.map((researcher) => <Avatar personnelPageLink={ `/${lang}/personnel/${researcher.id.replace( lang + "/", "")}`} name={researcher.data.name_surname} title={researcher.data.title} showNameCard={true} avatarLink={researcher.data.avatar_link} role={researcher.data.role}/>)}
 			</div>)
 			}
 			{expert_staff.length > 0 && (<SectionTitleBar text={t("page.team.experts")} />
 			<div class="w-full flex flex-row justify-center flex-wrap gap-[64px] p-[16px] md:p-[64px]">
-				{expert_staff.map((expert) => <Avatar personnelPageLink={expert.data.orc_id ? "personnel/" + expert.id.replace( lang + "/", "") : null} name={expert.data.name_surname} title={expert.data.title} showNameCard={true} avatarLink={expert.data.avatar_link} role={expert.data.role}/>)}
+				{expert_staff.map((expert) => <Avatar personnelPageLink={ `/${lang}/personnel/${expert.id.replace( lang + "/", "")}`} name={expert.data.name_surname} title={expert.data.title} showNameCard={true} avatarLink={expert.data.avatar_link} role={expert.data.role}/>)}
 			</div>)
 			}
 		</RegularSlide>
