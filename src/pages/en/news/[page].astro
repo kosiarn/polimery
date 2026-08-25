@@ -32,7 +32,7 @@ const posts = page.data;
 					{
 						posts.map((post) => (
 							<li class="border-1 border-black p-[16px] max-w-[352px] h-fit w-fit align-center">
-								<a class="align-center flex flex-col items-center" href={`post/${post.id.replace(lang + "/", "")}`}>
+								<a class="align-center flex flex-col items-center" href={"/" + lang + "/news/" + `post/${post.id.replace(lang + "/", "")}`}>
 									{post.data.heroImage && (
 										<Image  src={post.data.heroImage} alt="" />
 									)}
