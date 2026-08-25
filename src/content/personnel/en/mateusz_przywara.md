@@ -1,9 +1,9 @@
 
 ---
-position: 'Pracownik'
-title: 'Dr. inż.'
+position: 'Researcher'
+title: 'Dr. Eng.'
 name_surname: 'Mateusz Przywara'
-role: "Ekspert do spraw formulacji produktów farmaceutycznych"
+role: "Pharmaceutical products formulation expert"
 link:
     - label: "Bulk Materials Research Laboratory"
       link: "https://labmatsyp.prz.edu.pl/"

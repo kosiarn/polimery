@@ -1,7 +1,7 @@
 
 ---
 position: 'Supervisor'
-title: 'Dr. habil. Eng.'
+title: 'DSc, PhD, Eng., Associate Prof.'
 name_surname: 'Izabela Zaborniak'
 orc_id: '0000-0001-7533-3668'
 researcher_id: 'GPS-4807-2022'

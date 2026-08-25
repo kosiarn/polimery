@@ -1,9 +1,9 @@
 
 ---
-position: 'Pracownik'
+position: 'Researcher'
 title: 'Mgr. inż.'
 name_surname: 'Mirosława Kwasek'
-role: "Ekspert ds. kontroli jakości produktów transferowych"
+role: "Transfer product quality control expert"
 note: "Work in progress"
 group: "Expert"
 ---
