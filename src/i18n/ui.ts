@@ -27,7 +27,7 @@ export const ui = {
 	"page.team.science": "Kadra naukowa",
 	"page.team.technical": "Kadra techniczna",
 	"page.team.experts": "Kadra ekspercka",
-	"page.main.title.line1": "Nowoczesne polimery",
+	"page.main.title.line1": "Inteligentne polimery",
 	"page.main.title.line2": "dla nowoczesnej farmacji",
 	"page.main.title.description.line1_1": "Projekt finansowany w ramach programu",
 	"page.main.title.description.line1_2": "",
