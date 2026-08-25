@@ -70,6 +70,9 @@ jobs:
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} npx tinacms build
         working-directory: ${{ env.BUILD_PATH }}
+        env:
+          TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
