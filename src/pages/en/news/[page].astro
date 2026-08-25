@@ -11,7 +11,7 @@ const lang = getLangFromURL(Astro.url);
 const t = useTranslations(lang);
 
 export const getStaticPaths = (async ({paginate}) => {
-	const posts = (await getCollection('blog', ({id}) => {return id.includes("pl")})).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+	const posts = (await getCollection('blog', ({id}) => {return id.includes("en")})).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 	return paginate(posts, {pageSize: 4});
 }) satisfies GetStaticPaths;
 
