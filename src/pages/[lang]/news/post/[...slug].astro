@@ -1,0 +1,45 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseHead from '../../../../components/BaseHead.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../../../consts';
+import WelcomeSlide from '../../../../components/WelcomeSlide.astro';
+import RegularSlide from "../../../../components/RegularSlide.astro"
+import FormattedDate from "../../../../components/FormattedDate.astro"
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return posts.map((post) => {
+		const [lang, ...slug] = post.id.split("/");
+		return { params: { slug: slug.join(""), lang },props: post,};
+	})
+}
+
+type Props = CollectionEntry<'blog'>;
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<WelcomeSlide>
+			<div class="w-full h-full flex flex-row justify-center items-center">
+				<div class="bg-white/85 flex flex-col-reverse md:flex-row px-[64px] py-[64px] m-[32px] w-full h-[90%]">
+					<div class="flex flex-col justify-center items-center w-full h-full">
+						<h1 class="font-display text-[36px]">{post.data.title}</h1>
+						<FormattedDate date={post.data.pubDate} />
+					</div>
+					<div class="flex flex-col justify-center items-center w-full h-full">
+						<Image src={post.data.heroImage} alt="" />
+					</div>
+				</div>
+			</div>
+		</WelcomeSlide>
+		<RegularSlide>
+			<div class="flex w-full h-fit justify-left font-regular">
+				<Content />
+			</div>
+		</RegularSlide>
+	</body>

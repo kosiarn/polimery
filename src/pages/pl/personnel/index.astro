@@ -1,0 +1,62 @@
+
+---
+import WelcomeSlide from "../../../components/WelcomeSlide.astro"
+import RegularSlide from "../../../components/RegularSlide.astro"
+import BaseHead from "../../../components/BaseHead.astro"
+import Avatar from "../../../components/Avatar.jsx"
+import SectionTitleBar from "../../../components/SectionTitleBar.astro"
+import { getCollection } from "astro:content"
+import { getLangFromURL, useTranslations } from "../../../i18n/utils"
+
+const lang = getLangFromURL(Astro.url);
+const t = useTranslations(lang);
+const supervisor = await getCollection('personnel', ({data, id}) => { return data.position == 'Kierownik' && id.includes(lang)})
+const phd_students = await getCollection('personnel', ({data, id}) => { return data.position == 'Doktorant' && id.includes(lang)})
+const researchers = await getCollection('personnel', ({data, id}) => { return data.position == 'Pracownik' && id.includes(lang)})
+const students = await getCollection('personnel', ({data, id}) => { return data.position == 'Student' && id.includes(lang)})
+
+---
+	<head>
+		<BaseHead title={t("page.team.title")} description="" />
+	</head>
+	<body>
+		<WelcomeSlide>
+			<div class="w-full h-full flex flex-row justify-center items-center">
+				<div class="w-max-[1400px] md:h-max-[716px] w-[72%] h-[80%] md:h-[65%] bg-managerblue/50 flex flex-col py-[16px] px-[37px] md:py-[28px]">
+					<h1 class="font-display text-center text-[30px] md:text-[36px] p-[8px] md:p-0 w-full">{t("title.supervisor")}</h1>
+					<div class="w-full h-full flex flex-col md:flex-row items-center md:gap-[24px]">
+						<Avatar personnelPageLink={"personnel/" + supervisor[0].id.replace( lang + "/", "")} avatarLink={supervisor[0].data.avatar_link} />
+							<div class="flex flex-col md:flex-row w-full items-center justify-between">
+								<div class="h-full w-fit flex flex-col items-center justify-center px-[8px]">
+									<p class="font-regular lg:text-left text-[16px] lg:text-[36px] w-full text-center">{supervisor[0].data.title}</p>
+									<h1 class="font-regular text-[32px] lg:text-[64px] text-center">{supervisor[0].data.name_surname}</h1>
+								</div>
+								<div style="border-left:1px solid #000;height:160px" class="invisible 2xl:visible"></div>
+								<div class="flex flex-col items-center justify-center px-[12px] invisible 2xl:visible">
+									<p class="font-regular text-[36px] w-full text-left">ORCID: {supervisor[0].data.orc_id}</p>
+									<p class="font-regular text-[36px] w-full text-left">Researcher ID: {supervisor[0].data.researcher_id}</p>
+									{supervisor[0].data.google_scholar && <a href={supervisor[0].data.google_scholar} class="font-regular text-[36px] underline w-full text-left">Google Scholar</a>}
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</WelcomeSlide>
+		<RegularSlide>
+			{researchers.length > 0 && (<SectionTitleBar text={t("page.team.researchers")} />
+			<div class="w-full flex flex-row justify-center flex-wrap gap-[64px] p-[64px]">
+				{researchers.map((researcher) => <Avatar personnelPageLink={"personnel/" + researcher.id.replace( lang + "/", "")} name={researcher.data.name_surname} title={researcher.data.title} showNameCard={true} avatarLink={researcher.data.avatar_link}/>)}
+			</div>)
+			}
+			{phd_students.length > 0 && (<SectionTitleBar text={t("page.team.phd_students")} />
+			<div class="w-full flex flex-row justify-center flex-wrap gap-[64px] p-[64px]">
+				{phd_students.map((student) => <Avatar personnelPageLink={"personnel/" + student.id.replace( lang + "/", "")} name={student.data.name_surname} title={student.data.title} showNameCard={true} avatarLink={student.data.avatar_link}/>)}
+			</div>)
+			}
+			{students.length > 0 && (<SectionTitleBar text={t("page.team.students")} />
+			<div class="w-full flex flex-row justify-center flex-wrap gap-[64px] p-[64px]">
+				{students.map((student) => <Avatar personnelPageLink={student.data.orc_id ? "personnel/" + student.id.replace( lang + "/", "") : null} name={student.data.name_surname} title={student.data.title} showNameCard={true} avatarLink={student.data.avatar_link}/>)}
+			</div>)
+			}
+		</RegularSlide>
+	</body>

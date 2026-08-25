@@ -1,0 +1,17 @@
+---
+import Header from "./Header.astro"
+import PillImage from "../assets/pills.jpg"
+import { getImage } from 'astro:assets';
+const background_img = await getImage({src: PillImage})
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'a'>;
+const { href, class: className, ...props } = Astro.props;
+import "../styles/global.css"
+---
+
+<div class="h-screen max-h-screen overflow-clip flex flex-col justify-start" style={`background-image: url(${background_img.src}); background-size: cover;`}>
+	<Header />
+	<div class="h-full w-full">
+		<slot />
+	</div>
+</div>

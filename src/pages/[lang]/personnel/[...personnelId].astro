@@ -1,0 +1,79 @@
+
+---
+import WelcomeSlide from "../../../components/WelcomeSlide.astro"
+import RegularSlide from "../../../components/RegularSlide.astro"
+import BaseHead from "../../../components/BaseHead.astro"
+import Avatar from "../../../components/Avatar.jsx"
+import SectionTitleBar from "../../../components/SectionTitleBar.astro"
+import { CollectionEntry, getCollection } from "astro:content";
+import SectionListItem from "../../../components/SectionListItem.astro";
+import { getLangFromURL, useTranslations } from "../../../i18n/utils"
+
+ export async function getStaticPaths ()  {
+	const entries = await getCollection('personnel');
+	return entries.map(entry => {
+		const [lang, ...id] = entry.id.split("/");
+		return {
+			params: {personnelId: id.join(""), lang},
+			props: entry
+		}
+	});
+}
+type Props = CollectionEntry<'personnel'>;
+const  entry = Astro.props.data;
+const  lang = getLangFromURL(Astro.url);
+const t = useTranslations(lang);
+---
+	<head>
+		<BaseHead title=`${entry.name_surname} ${t("page.personnel.details.title_1")}${entry.position}${t("page.personnel.details.title_2")}` description="" />
+	</head>
+	<body>
+		<WelcomeSlide>
+			<div class="w-full h-full flex flex-row justify-center items-center">
+				<div class="bg-white/50 flex flex-col px-[64px] py-[64px] m-[16px] md:m-[64px] w-full h-[90%]">
+					<div class="w-full h-full flex flex-row items-center gap-[10%]">
+						<div class="flex flex-col md:flex-row w-full items-center justify-center gap-[20%]">
+							<div class="flex flex-col items-center justify-center px-[24px] text-center">
+								<p class="font-regular text-[24px] md:text-[32px] w-full">{entry.title}</p>
+								<p class="font-regular text-[32px] md:text-[36px]">{entry.name_surname}</p>
+								<p class="font-regular text-[24px] md:text-[32px] w-full text-left">ORCID: {entry.orc_id}</p>
+								<p class="font-regular text-[24px] md:text-[32px] w-full text-left">Researcher ID: {entry.researcher_id}</p>
+								{entry.google_scholar && <a href={entry.google_scholar} class="font-regular text-[36px] underline w-full text-center">Google Scholar</a>}
+							</div>
+						<Avatar personnelPageId={entry.id} avatarLink={entry.avatar_link} />
+						</div>
+					</div>
+				</div>
+			</div>
+		</WelcomeSlide>
+		{
+		(entry.scholarships || entry.education) && (
+		<RegularSlide>
+			{entry.scholarships && (
+			<SectionTitleBar text={t("page.personnel.details.fellowships")}/>
+					<div class="w-full flex flex-row text-center justify-center flex-wrap gap-[16px] py-[8px]">
+						{entry.scholarships.toReversed().map(scholarship => (
+							<SectionListItem>
+							<p>{scholarship.year}</p>
+							<p>{scholarship.department}</p>
+							<p>{scholarship.place}</p>
+							<p>{scholarship.position}</p>
+							</SectionListItem>
+							))}
+					</div>
+			)}
+			{entry.education && (
+			<SectionTitleBar text={t("page.personnel.details.education")}/>
+					<div class="w-full flex flex-row text-center justify-center flex-wrap gap-[16px] py-[8px]">
+						{entry.education.toReversed().map(education => (
+							<SectionListItem>
+							<p>{education.when}</p>
+							<p>{education.description}</p>
+							</SectionListItem>
+							))}
+					</div>
+			)}
+	
+		</RegularSlide>
+		)}
+	</body>

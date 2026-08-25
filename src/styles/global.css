@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Orbitron:wght@400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+	--font-display: "Orbitron", sans-serif;
+	--font-regular: "Jura", sans-serif;
+	--color-primary: #86a5aa;
+	--color-lightprimary: #c4eaf4;
+	--color-neutral: #d5dcdf;
+	--color-lightgreen: #c4eaf4;
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color-managerblue: #6c8893;
+}

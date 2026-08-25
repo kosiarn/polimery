@@ -1,0 +1,33 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+import "../styles/global.css"
+import { getLangFromURL, useTranslations } from "../i18n/utils.ts"
+import ResearchGroupLogo from '../assets/chmielarz_research_group_logo.png'
+import Image from 'astro/components/Image.astro';
+const lang = getLangFromURL(Astro.url);
+const otherLang =  lang == "pl" ? "EN" : "PL";
+const t = useTranslations(lang);
+
+---
+
+<header class="flex flex-row">
+	<nav class="bg-linear-to-b from-black/50 flex flex-col md:flex-row w-full justify-between py-[16px] px-[32px] h-fit items-center">
+		<div class="flex flex-row gap-[16px]">
+			<h2>
+				<a href="https://pchmielarz.v.prz.edu.pl/czlonkowie-grupy-badawczej">
+					<div class="bg-white/50 rounded-sm p-[8px]">
+						<Image src={ResearchGroupLogo} alt="Chmielarz Research Group" width={70}/>
+					</div>
+				</a>
+			</h2>
+		<div class="flex flex-row gap-[24px] text-[12px] md:text-[16px]">
+			<HeaderLink href={ "/" + lang + "/" }>{t("nav.mainpage")}</HeaderLink>
+			<HeaderLink href={ "/" + lang + "/personnel" }>{t("nav.team")}</HeaderLink>
+			<HeaderLink href={ "/" + lang + "/news" }>{t("nav.news")}</HeaderLink>
+			<HeaderLink href={ "/" + lang + "/contact" }>{t("nav.contact")}</HeaderLink>
+		</div>
+		</div>
+				<HeaderLink href={ "/" + otherLang.toLowerCase() + "/" + Astro.url.pathname.split("/").slice(2).join("/")}>{otherLang}</HeaderLink>
+	</nav>
+</header>

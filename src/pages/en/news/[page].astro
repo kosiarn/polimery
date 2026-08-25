@@ -1,0 +1,54 @@
+---
+import type { GetStaticPaths } from "astro";
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseHead from '../../../components/BaseHead.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../../consts';
+import WelcomeSlide from '../../../components/WelcomeSlide.astro';
+import { getLangFromURL, useTranslations } from "../../../i18n/utils"
+
+const lang = getLangFromURL(Astro.url);
+const t = useTranslations(lang);
+
+export const getStaticPaths = (async ({paginate}) => {
+	const posts = (await getCollection('blog', ({id}) => {return id.includes("en")})).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+	return paginate(posts, {pageSize: 4});
+}) satisfies GetStaticPaths;
+
+const {page} = Astro.props;
+const posts = page.data;
+
+---
+
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<WelcomeSlide>
+			<div class="w-full h-full flex flex-row justify-center items-start md:items-center">
+				<div class="bg-white/85 flex flex-col px-[64px] py-[16px] md:py-[64px] m-[16px] md:m-[32px] h-[80%] w-full md:h-[90%] ">
+					<h1 class="font-regular text-[32px] text-center md:text-[64px]">{t("page.news.title")}</h1>
+						<ul class="list-none w-full h-full p-[32px] flex flex-row flex-wrap justify-center gap-[16px] overflow-y-scroll overflow-x-clip">
+					{
+						posts.map((post) => (
+							<li class="border-1 border-black p-[16px] max-w-[352px] h-fit w-fit align-center">
+								<a class="align-center flex flex-col items-center" href={`post/${post.id.replace(lang + "/", "")}`}>
+									{post.data.heroImage && (
+										<Image  src={post.data.heroImage} alt="" />
+									)}
+									<h4 class="font-regular text-center text-[16px] uppercase truncate max-w-[250px]" title={post.data.title}>{post.data.title}</h4>
+									<p class="font-regular text-right text-[16px]">{t("page.news.openpost")} ➡</p>
+								</a>
+							</li>
+						))
+						}
+						</ul>
+			<div class="flex font-regular flex-row items-center justify-center">
+				{page.url.prev && <a href={page.url.prev} >⬅ {t("nav.prevpage")}</a>}
+				{page.url.next && <a href={page.url.next} > {t("nav.nextpage")}➡</a>}
+			</div>
+				</div>
+			</div>
+
+		</WelcomeSlide>
+	</body>

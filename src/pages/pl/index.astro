@@ -1,0 +1,66 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import WelcomeSlide from "../../components/WelcomeSlide.astro"
+import { getLangFromURL, useTranslations } from "../../i18n/utils"
+import RegularSlide from '../../components/RegularSlide.astro';
+import SectionTitleBar from '../../components/SectionTitleBar.astro';
+import Image from 'astro/components/Image.astro';
+import LandingPageImage from '../../assets/landing_page_photo.jpg'
+import NcbrLogo from '../../assets/ncbr.svg'
+const lang = getLangFromURL(Astro.url);
+const t = useTranslations(lang);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<WelcomeSlide>
+			<div class="h-full w-full max-w-[960px] flex flex-col items-center justify-center px-[110px] gap-[24px]">
+				<h1 class="font-display text-center md:text-left text-[24px] md:text-[48px] w-full">{t("page.main.title.line1")}<br> &nbsp; {t("page.main.title.line2")}</h1>
+				<p class="text-white uppercase font-regular text-[16px] md:text-[24px]">
+				{t("page.main.title.description.line1_1")} <span class="text-black">LIDER XIV</span> {t("page.main.title.description.line1_2")}
+				 {t("page.main.title.description.line2") + " "}<span class="text-black">Narodowe Centrum Badań i Rozwoju </span></p>
+				<Image src={NcbrLogo} alt="Narodowe Centrum Badań i Rozwoju" width={200}/>
+			</div>
+		</WelcomeSlide>
+		<RegularSlide>
+			<div class="flex flex-col p-[32px] md:p-[64px] bg-primary w-full gap-[36px]">
+				<h2 class="font-display text-center md:text-left text-[24px] uppercase">Co robimy</h2>
+				<div class="flex flex-col text-[20px] gap-[16px] font-regular">
+				<p>Współczesna farmakologia coraz częściej koncentruje się nie tylko na odkrywaniu nowych substancji czynnych, lecz przede wszystkim na udoskonalaniu sposobu ich podawania. Optymalizacja terapii może być osiągnięta poprzez modyfikację postaci leku i technologii jego uwalniania, przy wykorzystaniu już znanych i skutecznych substancji aktywnych.</p>
+				<p>Leki o kontrolowanym uwalnianiu różnią się od preparatów konwencjonalnych sposobem, szybkością i miejscem uwalniania substancji czynnej. Odpowiednio zaprojektowana forma farmaceutyczna pozwala uzyskać zarówno efekt natychmiastowy, jak i przedłużony czy opóźniony.</p>
+				<p>Nowoczesne formy leków o modyfikowanym uwalnianiu poprawiają komfort terapii – nie wymagają częstego przyjmowania i pozwalają na utrzymanie stabilnego stężenia substancji czynnej w organizmie. Ma to szczególne znaczenie dla pacjentów przyjmujących wiele leków jednocześnie, zwłaszcza osób starszych. Choć dawka w preparatach o przedłużonym uwalnianiu bywa wyższa niż w formach tradycyjnych, zwykle stosuje się ją raz dziennie, co sprzyja lepszej adherencji i minimalizacji działań niepożądanych.</p>
+				<p>Nasze działania łączą zaawansowaną syntezę chemiczną z nowoczesną technologią postaci leku, aby tworzyć bardziej efektywne, bezpieczne i przyjazne pacjentowi rozwiązania terapeutyczne.</p>
+				</div>
+			</div>
+			<div class="flex flex-col w-full mt-[16px]">
+				<SectionTitleBar text={"O projekcie"} size=24 />
+				<div class="flex flex-col-reverse md:flex-row">
+					<div class="flex flex-col font-regular items-left justify-center p-[8px]">
+						<p>Projekt LIDER koncentruje się na opracowaniu innowacyjnych substancji pomocniczych do leków o przedłużonym i opóźnionym uwalnianiu. W tego typu formulacjach substancje pomocnicze mogą stanowić nawet do 68% masy tabletki, co bezpośrednio wpływa na jej rozmiar, komfort stosowania oraz efektywność terapeutyczną.</p>
+						<p>Naszym celem jest zaprojektowanie i synteza nowatorskich, polimerycznych substancji pomocniczych w postaci rozgałęzionych (gwiaździstych) polimerów o rdzeniu sacharozy oraz kopolimerowych ramionach o charakterystyce jonowej. Opracowana koncepcja ma potencjał:</p>
+						<ul class="list-disc p-[16px]">
+							<li>zwiększyć efektywność formulacji,</li>
+							<li>umożliwić wyższe stężenie substancji czynnej w tabletce,</li>
+							<li>ograniczyć ilość substancji pomocniczych,</li>
+							<li> zmniejszyć masę gotowego produktu leczniczego.</li>
+						</ul>
+						<p>Projektowane przez nas  polimery gwiaździste zawierają rdzeń pochodzenia naturalnego oraz osiem łańcuchów polimerowych zawierających liczne reaktywne grupy funkcyjne. Taka architektura makrocząsteczki pozwala precyzyjnie kształtować właściwości uwalniania substancji aktywnej. W modelowych preparatach spodziewamy się nawet dwukrotnej redukcji ilości substancji pomocniczych.</p>
+						<p>Kluczowym aspektem projektu jest pełna kontrola nad strukturą syntetyzowanych polimerów, gdyż w farmacji nie ma miejsca na przypadkowość. Jednorodność, powtarzalność oraz ściśle zdefiniowana budowa chemiczna są warunkiem zachowania równowagi farmaceutycznej i biologicznej produktu leczniczego. Różnice w składzie lub strukturze polimeru, wynikające z braku kontroli nad procesem syntezy, mogą wpływać na biodostępność i skuteczność terapii, a tym samym na możliwość dopuszczenia produktu odtwórczego do obrotu.</p>
+						<p>Kontrolowaną syntezę rozgałęzionych polimerów, w tym struktur gwiaździstych o rdzeniu pochodzenia naturalnego, umożliwia metoda polimeryzacji rodnikowej z przeniesieniem atomu (ATRP), w której się specjalizujemy. Technika ta pozwala na otrzymywanie materiałów o precyzyjnie zaprojektowanej architekturze i wysokiej powtarzalności między seriami.</p>
+						<p>Potencjał wdrożeniowy projektu zostanie zweryfikowany w warunkach przemysłowych. We współpracy z firmą farmaceutyczną przeprowadzona zostanie analiza profilu uwalniania substancji czynnych z modelowych preparatów dostępnych na rynku, w których dotychczasowe substancje pomocnicze zostaną zastąpione opracowanymi przez nas polimerami. Planowane są również badania biorównoważności oraz testy potwierdzające bezpieczeństwo i skuteczność proponowanych rozwiązań.</p>
+						<p>Projekt łączy zaawansowaną chemię polimerów z realnymi potrzebami przemysłu farmaceutycznego, tworząc podstawy do opracowania lżejszych, bardziej efektywnych i nowoczesnych postaci leków o modyfikowanym uwalnianiu.</p>
+					</div>
+					<div class="md:max-w-[50%] flex flex-col items-center justify-center">
+						<Image src={LandingPageImage} alt="" />
+					</div>
+				</div>
+			</div>
+		</RegularSlide>
+	</body>
+
+</html>

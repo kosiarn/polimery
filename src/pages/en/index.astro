@@ -1,0 +1,66 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import WelcomeSlide from "../../components/WelcomeSlide.astro"
+import { getLangFromURL, useTranslations } from "../../i18n/utils"
+import RegularSlide from '../../components/RegularSlide.astro';
+import SectionTitleBar from '../../components/SectionTitleBar.astro';
+import Image from 'astro/components/Image.astro';
+import LandingPageImage from '../../assets/landing_page_photo.jpg'
+import NcbrLogo from '../../assets/ncbr.svg'
+const lang = getLangFromURL(Astro.url);
+const t = useTranslations(lang);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<WelcomeSlide>
+			<div class="h-full w-full max-w-[960px] flex flex-col items-center justify-center px-[110px] gap-[24px]">
+				<h1 class="font-display text-center md:text-left text-[24px] md:text-[48px] w-full">{t("page.main.title.line1")}<br> &nbsp; {t("page.main.title.line2")}</h1>
+				<p class="text-white uppercase font-regular text-[16px] md:text-[24px]">
+				{t("page.main.title.description.line1_1")} <span class="text-black">LIDER XIV</span> {t("page.main.title.description.line1_2")}
+				 {t("page.main.title.description.line2") + " "}<span class="text-black">Narodowe Centrum Badań i Rozwoju </span></p>
+				<Image src={NcbrLogo} alt="Narodowe Centrum Badań i Rozwoju" width={200}/>
+			</div>
+		</WelcomeSlide>
+		<RegularSlide>
+			<div class="flex flex-col p-[32px] md:p-[64px] bg-primary w-full gap-[36px]">
+				<h2 class="font-display text-center md:text-left text-[24px] uppercase">What we do</h2>
+				<div class="flex flex-col text-[20px] gap-[16px] font-regular">
+				<p>Contemporary pharmacology is increasingly focused not only on the discovery of new active pharmaceutical ingredients, but also on the rational design and optimization of drug delivery systems. Therapy can be optimized by modifying the dosage form and drug release technology while making use of already known and effective active substances.</p>
+				<p>Modified-release drugs differ from conventional formulations in the way, rate, and site of active ingredient release. A properly designed pharmaceutical dosage form can provide an immediate, sustained, or delayed therapeutic effect.</p>
+				<p>Modern modified-release dosage forms improve the convenience of therapy by reducing the frequency of administration and helping to maintain a more stable concentration of the active ingredient in the body. This is particularly important for patients taking multiple medications simultaneously, especially older adults. Although the dose in extended-release formulations may be higher than that in conventional dosage forms, it is typically administered once daily, which can improve adherence and help minimize adverse effects.</p>
+				<p>Our research combines advanced chemical synthesis with modern pharmaceutical formulation technologies to develop more effective, safer, and patient-friendly therapeutic solutions.</p>
+				</div>
+			</div>
+			<div class="flex flex-col w-full mt-[16px]">
+				<SectionTitleBar text={"About the project"} size=24 />
+				<div class="flex flex-col-reverse md:flex-row">
+					<div class="flex flex-col items-left justify-center p-[8px] font-regular">
+						<p>The LIDER project focuses on the development of innovative pharmaceutical excipients for extended- and delayed-release drug formulations. In such formulations, excipients may account for up to 68% of the total tablet weight, directly affecting tablet size, patient acceptability, and therapeutic performance.</p>
+						<p>Our goal is to design and synthesize novel polymeric excipients in the form of branched, star-shaped polymers with a sucrose core and ionically functionalized copolymer arms. This approach has the potential to:</p>
+						<ul class="list-disc p-[16px]">
+							<li>increase formulation efficiency;</li>
+							<li>enable a higher concentration of the active pharmaceutical ingredient (API) within the tablet;</li>
+							<li>reduce the amount of excipients required;</li>
+							<li>decrease the overall weight of the finished dosage form.</li>
+						</ul>
+						<p>The star-shaped polymers developed in our project contain a naturally derived core and eight polymer chains bearing multiple reactive functional groups. This macromolecular architecture provides a high degree of control over the interactions between the polymer matrix and the active ingredient, enabling the release profile to be precisely tailored. In model formulations, we anticipate that the amount of excipient required could be reduced by up to twofold.</p>
+						<p>A key aspect of the project is precise control over the structure of the synthesized polymers, as there is no room for variability or uncertainty in pharmaceutical applications. Uniformity, reproducibility, and a well-defined chemical structure are essential for maintaining the pharmaceutical quality, performance, and biological safety of a medicinal product. Variations in polymer composition or architecture resulting from insufficient control over the synthesis process may affect drug release, bioavailability, and therapeutic efficacy, and may consequently influence the regulatory acceptability of a generic medicinal product.</p>
+						<p>The controlled synthesis of branched polymers, including star-shaped architectures with naturally derived cores, is enabled by atom transfer radical polymerization (ATRP), a technique in which our research group specializes. ATRP enables the preparation of polymeric materials with well-defined architectures, controlled composition, and high batch-to-batch reproducibility, which are critical requirements for pharmaceutical applications.</p>
+						<p>The translational and industrial potential of the project will be evaluated under conditions relevant to pharmaceutical manufacturing. In collaboration with a pharmaceutical company, we will investigate the release profiles of active ingredients from selected commercially available model formulations in which conventional excipients will be replaced with the newly developed polymers. Bioequivalence studies, together with additional tests assessing the safety and efficacy of the proposed solutions, are also planned.</p>
+						<p>The project combines advanced polymer chemistry with the practical needs of the pharmaceutical industry, laying the foundations for the development of smaller, more efficient, and technologically advanced modified-release dosage forms.</p>
+					</div>
+					<div class="md:max-w-[50%] flex flex-col items-center justify-center">
+						<Image src={LandingPageImage} alt="" />
+					</div>
+				</div>
+			</div>
+		</RegularSlide>
+	</body>
+
+</html>

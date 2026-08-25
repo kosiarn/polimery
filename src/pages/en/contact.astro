@@ -1,0 +1,43 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import WelcomeSlide from '../../components/WelcomeSlide.astro';
+import { getLangFromURL, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromURL(Astro.url);
+const t = useTranslations(lang);
+---
+
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<WelcomeSlide>
+			<div class="flex flex-col md:flex-row w-full h-full items-center justify-center p-[64px] gap-[32px]">
+				<div class="flex flex-col font-regular bg-white/50 w-full p-[16px] text-[16px] md:text-[24px]">
+					<p>{t("names.rzeszowtechnicalschool")}</p>
+					<p>{t("names.rzeszowtechnicalschool.chemfaculty")}</p>
+					<p>{t("names.rzeszowtechnicalschool.physchemdepartment")}</p>
+					<p>&nbsp;&nbsp;</p>
+					<p>al. Powstańców Warszawy 6</p>
+					<p>35-029 Rzeszów</p>
+					<p>&nbsp;&nbsp;</p>
+					<p>{t("title.dsceng")} Izabela Zaborniak, {t("title.professorat")} PRz</p>
+					<p>{t("page.contact.phone")} +48 17 865 18 22</p>
+					<p>{t("page.contact.email")} i.zaborniak@prz.edu.pl</p>
+					
+				</div>
+				<div class="w-full h-full max-w-[500px] max-h-[500px]">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3841.037682048664!2d21.98520845727683!3d50.01913084749082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cfbae554b096b%3A0xfb1f78d1a4df278d!2sRzesz%C3%B3w%20University%20of%20Technology!5e0!3m2!1sen!2spl!4v1787500762322!5m2!1sen!2spl"
+						width="100%"
+						height="100%"
+						style="border:0;"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="strict-origin-when-cross-origin">
+					</iframe>
+				</div>
+			</div>
+		</WelcomeSlide>
+	</body>
