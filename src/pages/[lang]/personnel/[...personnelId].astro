@@ -29,16 +29,19 @@ const t = useTranslations(lang);
 	</head>
 	<body>
 		<WelcomeSlide>
-			<div class="w-full h-full flex flex-row justify-center items-center">
-				<div class="bg-white/50 flex flex-col px-[64px] py-[64px] m-[16px] md:m-[64px] w-full h-[90%]">
+			<div class="w-full h-full flex flex-row justify-center items-center ">
+				<div class="bg-white/50 flex flex-col px-[16px] py-[24px] md:px-[64px] md:py-[64px] m-[16px] md:m-[64px] w-full h-[90%] overflow-y-scroll">
 					<div class="w-full h-full flex flex-row items-center gap-[10%]">
-						<div class="flex flex-col md:flex-row w-full items-center justify-center gap-[20%]">
-							<div class="flex flex-col items-center justify-center px-[24px] text-center">
-								<p class="font-regular text-[24px] md:text-[32px] w-full">{entry.title}</p>
-								<p class="font-regular text-[32px] md:text-[36px]">{entry.name_surname}</p>
-								<p class="font-regular text-[24px] md:text-[32px] w-full text-left">ORCID: {entry.orc_id}</p>
-								<p class="font-regular text-[24px] md:text-[32px] w-full text-left">Researcher ID: {entry.researcher_id}</p>
-								{entry.google_scholar && <a href={entry.google_scholar} class="font-regular text-[36px] underline w-full text-center">Google Scholar</a>}
+						<div class="flex flex-col-reverse md:flex-row w-full items-center justify-center gap-[20%]">
+							<div class="flex flex-col w-full items-center justify-center px-[24px] text-center">
+								<p class="font-regular text-[20px] md:text-[28px] w-full">{entry.title}</p>
+								<p class="font-regular text-[28px] md:text-[32px]">{entry.name_surname}</p>
+								{entry.role && <p class="font-regular text-center text-[16px] md:text-[20px] w-full ">{entry.role}</p>}
+								{entry.orc_id && <p class="font-regular text-[20px] md:text-[24px] w-full">ORCID: {entry.orc_id}</p>}
+								{entry.researcher_id && <p class="font-regular text-[20px] md:text-[24px] w-full">Researcher ID: {entry.researcher_id}</p>}
+								{entry.google_scholar && <a href={entry.google_scholar} class="font-regular text-[20px] md:text-[24px] underline w-full text-center">Google Scholar</a>}
+								{entry.link && entry.link.map((link) => <a href={link.link} class="font-regular text-[20px] md:text-[24px] underline w-full text-center">{link.label}</a>)}
+								{entry.note && <p class="font-regular text-[20px] md:text-[24px] w-full m-[8px]">{entry.note}</p>}
 							</div>
 						<Avatar personnelPageId={entry.id} avatarLink={entry.avatar_link} />
 						</div>

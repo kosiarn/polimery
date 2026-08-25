@@ -36,8 +36,14 @@ const personnel = defineCollection({
 				when: z.string(),
 				description: z.string()
 			})).optional(),
-			avatar_link: z.string().optional()
-
+			avatar_link: z.string().optional(),
+			link: z.array(z.object({
+				label: z.string(),
+				link: z.string()
+			})).optional(),
+			note: z.string().optional(),
+			role: z.string().optional(),
+			group: z.string().optional()
 		}),
 });
 export const collections = { blog, personnel };

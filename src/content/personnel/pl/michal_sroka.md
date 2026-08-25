@@ -6,6 +6,11 @@ name_surname: 'Michał Sroka'
 orc_id: '0009-0002-0524-0313'
 researcher_id: 'JDC-1624-2023'
 avatar_link: 'https://pchmielarz.v.prz.edu.pl/fcp/oGBUKOQtTKlQhbx08SlkTUgNAUWRuHQwFDBoIVURNWHxaFVZpCFghUHcKVigEQUw/172/code_DE2gZIwlQKltwBEQoGhkfBlAHXTgg/crg_photo/michal-sroka_2023.jpg'
+role: "Specjalista do spraw syntezy, analizy struktury i właściwości polimerów"
+group: "Science"
+link:
+    - label: "Szczegółowe informacje"
+      link: "https://pchmielarz.v.prz.edu.pl/czlonkowie-grupy-badawczej"
 education:
     - when: '2020  – 2024'
       description: studia inżynierskie na kierunku Inżynieria farmaceutyczna, Politechnika Rzeszowska
