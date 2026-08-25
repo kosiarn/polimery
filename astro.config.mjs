@@ -9,7 +9,7 @@ import { tinaAdminDevRedirect } from '@tinacms/astro/vite';
 import react from '@astrojs/react';
 
 export default defineConfig({
-    site: 'https://example.com',
+    site: 'https://izabelazaborniak-smartdrug.pl',
     integrations: [tina(), mdx(), sitemap(), react()],
     vite: {
         plugins: [tailwindcss(), tinaAdminDevRedirect()],
