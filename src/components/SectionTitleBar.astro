@@ -1,7 +1,7 @@
 ---
-const { text, size = 32 } = Astro.props;
+const { text, smsize = 24, size = 32 } = Astro.props;
 ---
 
 <div class="w-full h-fit py-[24px] text-center bg-primary flex flex-row items-center justify-center">
-	<h1 class={`font-display text-[${size}px]`}>{text}</h1>
+	<h1 class={`font-display text-[${smsize}px] md:text-[${size}px]`}>{text}</h1>
 </div>
