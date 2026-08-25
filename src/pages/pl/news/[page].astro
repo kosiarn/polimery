@@ -25,30 +25,37 @@ const posts = page.data;
 	</head>
 	<body>
 		<WelcomeSlide>
-			<div class="w-full h-full flex flex-row justify-center items-start md:items-center">
-				<div class="bg-white/85 flex flex-col px-[64px] py-[16px] md:py-[64px] m-[16px] md:m-[32px] h-[80%] w-full md:h-[90%] ">
-					<h1 class="font-regular text-[32px] text-center md:text-[64px]">{t("page.news.title")}</h1>
-						<ul class="list-none w-full h-full p-[32px] flex flex-row flex-wrap justify-center gap-[16px] overflow-y-scroll overflow-x-clip">
-					{
-						posts.map((post) => (
-							<li class="border-1 border-black p-[16px] max-w-[352px] h-fit w-fit align-center">
-								<a class="align-center flex flex-col items-center" href={"/" + lang + "/news/" + `post/${post.id.replace(lang + "/", "")}`}>
-									{post.data.heroImage && (
-										<Image  src={post.data.heroImage} alt="" />
-									)}
-									<h4 class="font-regular text-center text-[16px] uppercase truncate max-w-[250px]" title={post.data.title}>{post.data.title}</h4>
-									<p class="font-regular text-right text-[16px]">{t("page.news.openpost")} ➡</p>
-								</a>
-							</li>
-						))
-						}
-						</ul>
-			<div class="flex font-regular flex-row items-center justify-center">
-				{page.url.prev && <a href={page.url.prev} >⬅ {t("nav.prevpage")}</a>}
-				{page.url.next && <a href={page.url.next} > {t("nav.nextpage")}➡</a>}
-			</div>
-				</div>
-			</div>
+<div class="bg-white/85 flex flex-col mx-[32px] h-[calc(100vh-128px)] min-h-0">
+    
+    <h1 class="font-regular text-[32px] text-center md:text-[64px] flex-shrink-0">
+        {t("page.news.title")}
+    </h1>
+    
+<ul class="list-none flex flex-row flex-wrap justify-center items-start md:items-stretch flex-1 min-h-0 overflow-y-auto overflow-x-clip gap-4 p-4">
+    {
+    posts.map((post) => (
+        <li class="border border-black p-[16px] max-w-[352px] h-fit  w-full flex flex-col justify-between">
+            <a class="flex flex-col items-center w-full h-full justify-between" href={"/" + lang + "/news/" + `post/${post.id.replace(lang + "/", "")}`}>
+                <div class="flex flex-col items-center w-full">
+                    {post.data.heroImage && (
+                        <Image src={post.data.heroImage} alt="" class="object-cover h-[180px] w-full" />
+                    )}
+                    <h4 class="font-regular text-center text-[16px] uppercase truncate max-w-[250px] mt-2" title={post.data.title}>
+                        {post.data.title}
+                    </h4>
+                </div>
+                <p class="font-regular text-right text-[16px] w-full mt-4">{t("page.news.openpost")} ➡</p>
+            </a>
+        </li>
+    ))
+    }
+</ul>
+    
+    <div class="flex font-regular flex-row items-center justify-center flex-shrink-0 py-4">
+        {page.url.prev && <a href={page.url.prev}>⬅ {t("nav.prevpage")}</a>}
+        {page.url.next && <a href={page.url.next}>{t("nav.nextpage")}➡</a>}
+    </div>
+</div>
 
 		</WelcomeSlide>
 	</body>
