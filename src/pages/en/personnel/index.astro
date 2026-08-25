@@ -10,7 +10,7 @@ import { getLangFromURL, useTranslations } from "../../../i18n/utils"
 
 const lang = getLangFromURL(Astro.url);
 const t = useTranslations(lang);
-const supervisor = await getCollection('personnel', ({data, id}) => { return data.position == 'Kierownik' && id.includes(lang)})
+const supervisor = await getCollection('personnel', ({data, id}) => { return data.position == 'Supervisor' && id.includes(lang)})
 const scientific_staff = await getCollection('personnel', ({data, id}) => { return data.group == 'Science' && id.includes(lang)})
 const technical_staff = await getCollection('personnel', ({data, id}) => { return data.group == 'Technical' && id.includes(lang)})
 const expert_staff = await getCollection('personnel', ({data, id}) => { return data.group == 'Expert' && id.includes(lang)})
