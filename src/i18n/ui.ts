@@ -69,7 +69,7 @@ export const ui = {
 	"page.main.title.line1": "Smart polymers",
 	"page.main.title.line2": "for modern medicine",
 	"page.main.title.description.line1_1": "Project sponsored under the",
-	"page.main.title.description.line1_2": "program",
+	"page.main.title.description.line1_2": "program ",
 	"page.main.title.description.line2": "sponsored by",
 	"page.news.title": "News",
 	"page.news.openpost": "Read more...",
