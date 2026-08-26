@@ -7,7 +7,7 @@ orc_id: '0000-0001-7533-3668'
 researcher_id: 'GPS-4807-2022'
 avatar_link: 'https://pchmielarz.v.prz.edu.pl/fcp/oGBUKOQtTKlQhbx08SlkTUgNAUWRuHQwFDBoIVURNWHxaFVZpCFghUHcKVigEQUw/172/code_DE2gZIwlQKltwBEQoGhkfBlAHXTgg/crg_photo/2023/izabela_zaborniak.jpg'
 link:
-    - label: "Website"
+    - label: "Details"
       link: "https://izaborniak.v.prz.edu.pl/"
 scholarships: 
     - year: 2018

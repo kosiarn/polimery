@@ -11,23 +11,6 @@ link:
     - label: "Details"
       link: "https://pchmielarz.v.prz.edu.pl/czlonkowie-grupy-badawczej"
 group: "Science"
-scholarships: 
-    - year: 2016
-      department: ''
-      place: 'Forschungszentrum Jülich, Germany'
-      position: 'summer school participant'
-    - year: 2019
-      department: 'Faculty of Chemistry'
-      place: 'University of Konstanz, Germany'
-      position: 'visiting scientist'
-    - year: 2022
-      department: 'Faculty of Chemical Sciences'
-      place: 'University of Milan, Italy'
-      position: 'visiting scientist'
-    - year: 2024
-      department: 'Faculty of Chemistry'
-      place: 'University of Padova, Italy'
-      position: 'visiting scientist'
 education:
     - when: '2020 - 2024'
       description: "Bachelor's studies in Pharmaceutical Engineering, Rzeszów University of Technology"

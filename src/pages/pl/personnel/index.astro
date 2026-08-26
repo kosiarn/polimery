@@ -36,6 +36,7 @@ const expert_staff = await getCollection('personnel', ({data, id}) => { return d
 									<p class="font-regular text-[36px] w-full text-left">ORCID: {supervisor[0].data.orc_id}</p>
 									<p class="font-regular text-[36px] w-full text-left">Researcher ID: {supervisor[0].data.researcher_id}</p>
 									{supervisor[0].data.google_scholar && <a href={supervisor[0].data.google_scholar} class="font-regular text-[36px] underline w-full text-left">Google Scholar</a>}
+									{supervisor[0].data.link && supervisor[0].data.link.map((link) => <a href={link.link} class="font-regular text-[36px] underline w-full text-left">{link.label}</a>)}
 								</div>
 							</div>
 					</div>

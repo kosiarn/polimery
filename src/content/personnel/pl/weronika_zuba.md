@@ -11,23 +11,6 @@ group: "Science"
 link:
     - label: "Szczegółowe informacje"
       link: "https://pchmielarz.v.prz.edu.pl/czlonkowie-grupy-badawczej"
-scholarships: 
-    - year: 2016
-      department: ''
-      place: 'Forschungszentrum Jϋlich, Niemcy'
-      position: 'uczestnik szkoły letniej'
-    - year: 2019
-      department: 'Wydział Chemiczny'
-      place: 'University of Konstanz, Niemcy'
-      position: 'wizytujący naukowiec'
-    - year: 2022
-      department: 'Wydział Nauk Chemicznych'
-      place: 'University of Milan, Włochy'
-      position: 'wizytujący naukowiec'
-    - year: 2024
-      department: 'Wydział Chemiczny'
-      place: 'University of Padova, Włochy'
-      position: 'wizytujący naukowiec'
 education:
     - when: '2020 - 2024'
       description: studia inżynierskie na kierunku Inżynieria farmaceutyczna, Politechnika Rzeszowska

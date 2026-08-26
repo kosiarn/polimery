@@ -52,7 +52,7 @@ export const ui = {
 	"nav.team": "Team",
 	"nav.news": "News",
 	"nav.contact": "Contact",
-	"title.supervisor": "Supervisor",
+	"title.supervisor": "Principal Investigator",
 	"title.researcher": "Researcher",
 	"title.student": "Student",
 	"title.phd": "PhD",

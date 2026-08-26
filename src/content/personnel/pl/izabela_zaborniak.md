@@ -8,7 +8,7 @@ researcher_id: 'GPS-4807-2022'
 avatar_link: 'https://pchmielarz.v.prz.edu.pl/fcp/oGBUKOQtTKlQhbx08SlkTUgNAUWRuHQwFDBoIVURNWHxaFVZpCFghUHcKVigEQUw/172/code_DE2gZIwlQKltwBEQoGhkfBlAHXTgg/crg_photo/2023/izabela_zaborniak.jpg'
 link:
     - label: "Wizytówka"
-      link: "https://izaborniak.v.prz.edu.pl/"
+      link: "https://izaborniak.v.prz.edu.pl/pl/"
 scholarships: 
     - year: 2018
       department: 'Wydział Nauk Chemicznych i Geologicznych'
