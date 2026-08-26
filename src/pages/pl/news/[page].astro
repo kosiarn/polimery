@@ -6,7 +6,7 @@ import BaseHead from '../../../components/BaseHead.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../../consts';
 import WelcomeSlide from '../../../components/WelcomeSlide.astro';
 import { getLangFromURL, useTranslations } from "../../../i18n/utils"
-
+import FormattedDate from "../../../components/FormattedDate.astro"
 const lang = getLangFromURL(Astro.url);
 const t = useTranslations(lang);
 
@@ -43,6 +43,7 @@ const posts = page.data;
                     <h4 class="font-regular text-center text-[16px] uppercase truncate max-w-[250px] mt-2" title={post.data.title}>
                         {post.data.title}
                     </h4>
+		    <p class="font-regular text-center text-[12px]"><FormattedDate date={post.data.pubDate} /></p>
                 </div>
                 <p class="font-regular text-right text-[16px] w-full mt-4">{t("page.news.openpost")} ➡</p>
             </a>
