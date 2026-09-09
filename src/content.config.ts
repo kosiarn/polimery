@@ -43,7 +43,8 @@ const personnel = defineCollection({
 			})).optional(),
 			note: z.string().optional(),
 			role: z.string().optional(),
-			group: z.string().optional()
+			group: z.string().optional(),
+			list_position: z.number().optional()
 		}),
 });
 export const collections = { blog, personnel };

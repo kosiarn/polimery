@@ -8,6 +8,19 @@ import SectionTitleBar from "../../../components/SectionTitleBar.astro"
 import { getCollection } from "astro:content"
 import { getLangFromURL, useTranslations } from "../../../i18n/utils"
 
+const sortByPosition = (a, b) => {
+	if (a.data.list_position !== undefined && b.data.list_position !== undefined) {
+		return a.data.list_position - b.data.list_position;
+	} 
+	if (a.data.list_position !== undefined) {
+		return -1;
+	}    
+	if (b.data.list_position !== undefined) {
+		return 1;
+	}    
+	return 0;
+}
+
 const lang = getLangFromURL(Astro.url);
 const t = useTranslations(lang);
 const supervisor = await getCollection('personnel', ({data, id}) => { return data.position == 'Supervisor' && id.includes(lang)})
@@ -56,7 +69,7 @@ const expert_staff = await getCollection('personnel', ({data, id}) => { return d
 			}
 			{expert_staff.length > 0 && (<SectionTitleBar text={t("page.team.experts")} />
 			<div class="w-full flex flex-row justify-center flex-wrap gap-[64px] p-[16px] md:p-[64px]">
-				{expert_staff.map((expert) => <Avatar personnelPageLink={ expert.id.replace( lang + "/", "") } name={expert.data.name_surname} title={expert.data.title} showNameCard={true} avatarLink={expert.data.avatar_link} role={expert.data.role}/>)}
+				{expert_staff.sort(sortByPosition).map((expert) => <Avatar personnelPageLink={ expert.id.replace( lang + "/", "") } name={expert.data.name_surname} title={expert.data.title} showNameCard={true} avatarLink={expert.data.avatar_link} role={expert.data.role}/>)}
 			</div>)
 			}
 		</RegularSlide>

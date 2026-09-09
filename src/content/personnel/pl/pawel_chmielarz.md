@@ -12,4 +12,5 @@ link:
     - label: "Wizytówka"
       link: "https://pchmielarz.v.prz.edu.pl/"
 group: "Expert"
+list_position: 1
 ---

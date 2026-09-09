@@ -13,4 +13,5 @@ link:
     - label: "Website"
       link: "https://pchmielarz.v.prz.edu.pl/"
 group: "Expert"
+list_position: 1
 ---
