@@ -1,7 +1,7 @@
 
 ---
 position: 'Pracownik'
-title: 'Dr. inż.'
+title1: 'Dr. inż.'
 name_surname: 'Mateusz Przywara'
 role: "Ekspert do spraw formulacji produktów farmaceutycznych"
 link:

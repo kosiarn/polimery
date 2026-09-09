@@ -1,7 +1,7 @@
 
 ---
 position: 'Pracownik'
-title: 'prof. dr hab. inż.'
+title1: 'prof. dr hab. inż.'
 name_surname: 'Paweł Chmielarz'
 orc_id: '0000-0002-9101-6264'
 researcher_id: 'C-8684-2017'

@@ -1,7 +1,7 @@
 
 ---
 position: 'Researcher'
-title: 'MSc Eng.'
+title1: 'MSc Eng.'
 name_surname: 'Robert Ostatek'
 role: "NMR analysis technician"
 link:

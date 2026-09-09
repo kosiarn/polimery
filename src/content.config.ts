@@ -20,7 +20,8 @@ const personnel = defineCollection({
 	loader: glob({ base: './src/content/personnel', pattern: '**/*.{md,mdx}' }),
 	schema: () =>
 		z.object({
-			title: z.string().optional(),
+			title1: z.string().optional(),
+			title2: z.string().optional(),
 			name_surname: z.string(),
 			orc_id: z.string().optional(),
 			researcher_id: z.string().optional(),

@@ -1,7 +1,7 @@
 
 ---
 position: 'Researcher'
-title: 'Dr. Eng.'
+title1: 'Dr. Eng.'
 name_surname: 'Paweł Błoniarz'
 orc_id: '0000-0001-9462-9640'
 researcher_id: 'AAU-5492-2021'

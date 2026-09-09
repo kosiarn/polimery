@@ -1,7 +1,7 @@
 
 ---
 position: 'Researcher'
-title: 'MSc Eng.'
+title1: 'MSc Eng.'
 name_surname: 'Weronika Zuba'
 orc_id: '0009-0001-2878-9475'
 researcher_id: 'KCK-2001-2024'

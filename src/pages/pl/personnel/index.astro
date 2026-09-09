@@ -60,17 +60,17 @@ const expert_staff = await getCollection('personnel', ({data, id}) => { return d
 		<RegularSlide>
 			{scientific_staff.length > 0 && (<SectionTitleBar text={t("page.team.science")} />
 			<div class="w-full flex flex-row justify-center flex-wrap gap-[64px] p-[16px] md:p-[64px]">
-				{scientific_staff.map((researcher) => <Avatar personnelPageLink={ `/${lang}/personnel/${researcher.id.replace( lang + "/", "")}`} name={researcher.data.name_surname} title={researcher.data.title} showNameCard={true} avatarLink={researcher.data.avatar_link} role={researcher.data.role}/>)}
+				{scientific_staff.map((researcher) => <Avatar personnelPageLink={ `/${lang}/personnel/${researcher.id.replace( lang + "/", "")}`} name={researcher.data.name_surname} title1={researcher.data.title1} title2={researcher.data.title2} showNameCard={true} avatarLink={researcher.data.avatar_link} role={researcher.data.role}/>)}
 			</div>)
 			}
 			{technical_staff.length > 0 && (<SectionTitleBar text={t("page.team.technical")} />
 			<div class="w-full flex flex-row justify-center flex-wrap gap-[64px] p-[16px] md:p-[64px]">
-				{technical_staff.map((researcher) => <Avatar personnelPageLink={ `/${lang}/personnel/${researcher.id.replace( lang + "/", "")}`} name={researcher.data.name_surname} title={researcher.data.title} showNameCard={true} avatarLink={researcher.data.avatar_link} role={researcher.data.role}/>)}
+				{technical_staff.map((researcher) => <Avatar personnelPageLink={ `/${lang}/personnel/${researcher.id.replace( lang + "/", "")}`} name={researcher.data.name_surname} title1={researcher.data.title1} title2={researcher.data.title2} showNameCard={true} avatarLink={researcher.data.avatar_link} role={researcher.data.role}/>)}
 			</div>)
 			}
 			{expert_staff.length > 0 && (<SectionTitleBar text={t("page.team.experts")} />
 			<div class="w-full flex flex-row justify-center flex-wrap gap-[64px] p-[16px] md:p-[64px]">
-				{expert_staff.sort(sortByPosition).map((expert) => <Avatar personnelPageLink={ `/${lang}/personnel/${expert.id.replace( lang + "/", "")}`} name={expert.data.name_surname} title={expert.data.title} showNameCard={true} avatarLink={expert.data.avatar_link} role={expert.data.role}/>)}
+				{expert_staff.sort(sortByPosition).map((expert) => <Avatar personnelPageLink={ `/${lang}/personnel/${expert.id.replace( lang + "/", "")}`} name={expert.data.name_surname} title1={expert.data.title1} title2={expert.data.title2} showNameCard={true} avatarLink={expert.data.avatar_link} role={expert.data.role}/>)}
 			</div>)
 			}
 		</RegularSlide>

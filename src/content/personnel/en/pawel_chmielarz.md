@@ -2,7 +2,8 @@
 ---
 
 position: 'Researcher'
-title: 'Prof. Dr. habil. Eng.'
+title1: 'Prof.'
+title2: 'DSc, PhD, Eng.'
 name_surname: 'Paweł Chmielarz'
 orc_id: '0000-0002-9101-6264'
 researcher_id: 'C-8684-2017'

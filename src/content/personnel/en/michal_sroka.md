@@ -1,7 +1,7 @@
 
 ---
 position: 'PhD student'
-title: 'MSc Eng.'
+title1: 'MSc Eng.'
 name_surname: 'Michał Sroka'
 orc_id: '0009-0002-0524-0313'
 researcher_id: 'JDC-1624-2023'

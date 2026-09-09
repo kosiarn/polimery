@@ -1,7 +1,7 @@
 
 ---
 position: 'Pracownik'
-title: 'Mgr. inż.'
+title1: 'Mgr. inż.'
 name_surname: 'Robert Ostatek'
 role: "Technik do analiz NMR"
 link:

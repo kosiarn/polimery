@@ -1,7 +1,7 @@
 
 ---
 position: 'Researcher'
-title: ''
+title1: ''
 name_surname: 'Damian Starzak'
 role: "Technical specialist"
 link:
