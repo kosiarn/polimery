@@ -2,6 +2,9 @@
 title: Presentation of Research Results at MIPOL 2026!
 pubDate: 2026-07-19T22:00:02.306Z
 heroImage: /src/assets/1_5.jpg
+imageGallery:
+  - /5_2.jpg
+  - /5_3.jpg
 ---
 
 As part of the activities related to the LIDER XIV project, Prof. Dr. Izabela Zaborniak and PhD student Michał Sroka participated in the Milan Polymer Days 2026 – MIPOL 2026 conference, presenting research results on the design of sucrose-core branched polymers for applications in modified drug release systems.

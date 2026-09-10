@@ -42,7 +42,8 @@ export const ui = {
 	"page.personnel.details.title_1": "- szczegóły ",
 	"page.personnel.details.title_2": "a",
 	"page.personnel.details.education": "Edukacja",
-	"page.personnel.details.fellowships": "Staże naukowe"
+	"page.personnel.details.fellowships": "Staże naukowe",
+	"page.news.image.gallery": "Galeria zdjęć"
 
     },
     en: {
@@ -81,6 +82,7 @@ export const ui = {
 	"page.personnel.details.title_1": "- ",
 	"page.personnel.details.title_2": "'s details",
 	"page.personnel.details.education": "Education",
-	"page.personnel.details.fellowships": "Research fellowships"
+	"page.personnel.details.fellowships": "Research fellowships",
+	"page.news.image.gallery": "Image gallery"
     },
 } as const

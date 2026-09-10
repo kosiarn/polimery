@@ -2,6 +2,8 @@
 title: Presentation of Research Results at RSC Poster 2026!
 pubDate: 2026-03-08T22:42:48.483Z
 heroImage: /src/assets/1_2.jpg
+imageGallery:
+  - /poster.jpeg
 ---
 
 On 3–4 March 2026, the international RSC Poster 2026 conference, organized by the Royal Society of Chemistry and held online, took place. Weronika Zuba, MSc Eng., participated in the event, presenting research results obtained as part of the LIDER XIV project.

@@ -2,6 +2,10 @@
 title: Obrony prac magisterskich realizowanych w ramach projektu!
 pubDate: 2026-07-15T21:51:23.126Z
 heroImage: /src/assets/1_4.jpg
+imageGallery:
+  - /4_2.jpg
+  - /4_3.jpg
+  - /4_4.jpg
 ---
 
 W dniu 10.07.2026 odbyły się obrony prac magisterskich realizowanych w ramach działalności Chmielarz Research Group, w tym prac dyplomantów realizujących badania związane z tematyką projektu LIDER XIV pod opieką kierownika projektu – dr hab. inż. Izabeli Zaborniak.
@@ -16,7 +20,7 @@ Celem pracy była synteza rozgałęzionych kopolimerów z centralnie usytuowaną
 
 Opracowane materiały stanowią potencjalną alternatywę dla dostępnych na rynku liniowych polimerów stosowanych w systemach modyfikowanego uwalniania, takich jak  dodatki polimerowe znane pod nazwą handlową Eudragit®. W porównaniu z konwencjonalnymi polimerami liniowymi charakteryzują się wysokim stopniem jednorodności, potwierdzonym wąskim rozrzutem mas cząsteczkowych, natomiast ich rozgałęziona architektura może potencjalnie zwiększać efektywność enkapsulacji substancji aktywnych.
 
-Serdecznie gratulujemy Mgr inż. Dominikowi Jaworskiemu oraz Mgr inż. Natalii Tomasik pomyślnego zakończenia studiów i obrony prac magisterskich! Życzymy dalszych sukcesów naukowych, zawodowych oraz wielu satysfakcjonujących wyzwań w przyszłości! 
+Serdecznie gratulujemy Mgr inż. Dominikowi Jaworskiemu oraz Mgr inż. Natalii Tomasik pomyślnego zakończenia studiów i obrony prac magisterskich! Życzymy dalszych sukcesów naukowych, zawodowych oraz wielu satysfakcjonujących wyzwań w przyszłości!
 
 Więcej informacji:
 

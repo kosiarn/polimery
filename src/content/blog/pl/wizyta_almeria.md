@@ -2,6 +2,11 @@
 title: Wizyta naukowa prof. dr hab. inż. Izabeli Zaborniak na Uniwersytecie w Almeríi!
 pubDate: 2026-06-21T21:48:03.536Z
 heroImage: /src/assets/1_3.jpg
+imageGallery:
+  - /3_2.jpg
+  - /3_3.jpg
+  - /3_4.jpg
+  - /3_5.jpg
 ---
 
 W dniach 09–14.06.2026 dr hab. inż. Izabela Zaborniak odbyła wizytę naukową w grupie badawczej prof. Ignacio Fernández de las Nieves (Advanced NMR Methods and Metal-based Catalysts Research Group) oraz laboratoriach Wydziału Chemii i Fizyki, Research Centre CIAIMBITAL na Uniwersytecie w Almeríi w Hiszpanii.

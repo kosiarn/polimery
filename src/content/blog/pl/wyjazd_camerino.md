@@ -2,6 +2,10 @@
 title: Wyjazd naukowy dr hab. inż. Izabeli Zaborniak do grupy badawczej specjalizującej się w polimerowych systemach uwalniania leków na Uniwersytecie w Camerino!
 pubDate: 2025-03-14T17:55:57.994Z
 heroImage: /src/assets/1.jpg
+imageGallery:
+    - /src/assets/2.jpg
+    - /src/assets/3.jpg
+    - /src/assets/4.jpg
 ---
 
 W dniach 01–08.03.2025 kierownik projektu – dr hab. inż. Izabela Zaborniak odbyła staż naukowy na Uniwersytecie w Camerino we Włoszech, w grupie badawczej prof. Roberty Censi.
@@ -18,4 +22,3 @@ Więcej informacji:
 
 [https://x.com/Chmielarz\_Group/status/1900195604438933942](https://x.com/Chmielarz_Group/status/1900195604438933942)
 
-![](/src/assets/2.jpg)![](/src/assets/3.jpg)![](/src/assets/4.jpg)

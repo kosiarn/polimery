@@ -2,6 +2,9 @@
 title: Prezentacja wyników badań podczas konferencji MIPOL 2026!
 pubDate: 2026-07-20T21:57:59.138Z
 heroImage: /src/assets/1_5.jpg
+imageGallery:
+  - /5_2.jpg
+  - /5_3.jpg
 ---
 
 W ramach działań związanych z realizacją projektu LIDER XIV, dr hab. inż. Izabela Zaborniak oraz doktorant Michał Sroka uczestniczyli w konferencji Milan Polymer Days 2026 – MIPOL 2026 prezentując wyniki badań dotyczące projektowania rozgałęzionych polimerów o rdzeniu sacharozy do zastosowań w systemach modyfikowanego uwalniania substancji leczniczych.

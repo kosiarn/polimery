@@ -2,6 +2,10 @@
 title: Master’s Thesis Defenses Conducted as Part of the Project!
 pubDate: 2026-07-15T21:55:51.121Z
 heroImage: /src/assets/1_4.jpg
+imageGallery:
+  - /4_2.jpg
+  - /4_3.jpg
+  - /4_4.jpg
 ---
 
 On 10 July 2026, master’s thesis defenses were held as part of the activities of the Chmielarz Research Group, including the theses of students whose research was related to the LIDER XIV project and conducted under the supervision of the project leader, Prof. Dr. Izabela Zaborniak.

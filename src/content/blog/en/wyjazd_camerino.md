@@ -2,6 +2,10 @@
 title: Scientific Visit of Prof. Dr. Izabela Zaborniak to a research group specializing in polymer-based drug delivery systems at the University of Camerino!
 pubDate: 2025-03-13T18:06:56.841Z
 heroImage: /src/assets/1.jpg
+imageGallery:
+    - /src/assets/2.jpg
+    - /src/assets/3.jpg
+    - /src/assets/4.jpg
 ---
 
 From 1–8 March 2025, the project leader, Prof. Dr. Izabela Zaborniak, completed a scientific research stay at the University of Camerino, Italy, in the research group led by Prof. Roberta Censi.
@@ -18,4 +22,3 @@ More information:
 
 [https://x.com/Chmielarz\_Group/status/1900195604438933942](https://x.com/Chmielarz_Group/status/1900195604438933942)
 
-![](/src/assets/2.jpg)![](/src/assets/3.jpg)![](/src/assets/4.jpg)

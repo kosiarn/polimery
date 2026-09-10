@@ -2,6 +2,11 @@
 title: Scientific Visit of Prof. Dr. Izabela Zaborniak to the University of Almería!
 pubDate: 2026-06-21T21:50:02.730Z
 heroImage: /src/assets/1_3.jpg
+imageGallery:
+  - /3_2.jpg
+  - /3_3.jpg
+  - /3_4.jpg
+  - /3_5.jpg
 ---
 
 From 9–14 June 2026, Prof. Dr. Izabela Zaborniak completed a scientific research visit to the research group led by Prof. Ignacio Fernández de las Nieves (Advanced NMR Methods and Metal-based Catalysts Research Group) and the laboratories of the Department of Chemistry and Physics, Research Centre CIAIMBITAL, at the University of Almería, Spain.

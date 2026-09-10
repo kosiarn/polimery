@@ -54,6 +54,14 @@ export default defineConfig({
             label: "Post's featured image, shown next to the title",
             required: true,
 	    uploadDir: (_) => "/src/assets/",
+	  },
+          {
+            type: "image",
+            name: "imageGallery",
+            label: "Images to be shown in a gallery below the blogpost.",
+            required: false,
+	    uploadDir: (_) => "/src/assets/",
+	    list: true
 	  }
         ],
         ui: {
